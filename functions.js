@@ -1,4 +1,3 @@
-let currentCaret = 0;
 
 // Get the index to point the caret to.
 // Key = length + currentCaretPos + inputType
@@ -39,6 +38,10 @@ export const functions = {
         // Handle Caret Jumping
         const key = length.toString() + caretPosition.toString() + inputType
         caretPosition = caretMapper.has(key) ? caretMapper.get(key) : caretPosition
+
+        if (length >= 4 && caretPosition == 1 && inputType==='insertText') {
+            caretPosition = 2
+        }
     
         return {result, caretPosition};
     }

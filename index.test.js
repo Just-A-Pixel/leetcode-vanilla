@@ -1,4 +1,3 @@
-
 import {functions} from "./functions.js";
 
 describe("index.html", () => {
@@ -8,7 +7,6 @@ describe("index.html", () => {
         expect(functions.formatNumber("123", 3, 'deleteContentBackward')).toStrictEqual({"result":'123', "caretPosition": 2})
         expect(functions.formatNumber("1234", 4, 'insertText')).toStrictEqual({"result":'(123) 4', "caretPosition": 7})
         expect(functions.formatNumber("1234567", 4, 'insertText')).toStrictEqual({"result":'(123) 456-7', "caretPosition": 4})
-
     })
 
     it("#Question 2: Check caret position", () => {
